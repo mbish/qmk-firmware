@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A Nix flake for building QMK firmware for custom keyboards with specific keymaps.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
