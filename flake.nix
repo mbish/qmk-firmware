@@ -26,7 +26,7 @@
       keyboards = [
         {
           keyboard = "hotdox76v2";
-          name = "mbishop_hotdox";
+          name = "hotdox76";
           rules = ./keyboards/hotdox76/rules.mk;
           config = ./keyboards/hotdox76/config.h;
           keymap = ./keyboards/hotdox76/keymap.c;
