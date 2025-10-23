@@ -51,9 +51,8 @@
           exit 1
         fi
 
-        ${pkgs.qmk}/bin/qmk flash "$FIRMWARE_PATH"
+        QMK_HOME=${qmk_firmware} ${pkgs.qmk}/bin/qmk --config-file /dev/null flash "$FIRMWARE_PATH"
       '';
-
       firmware = pkgs.stdenv.mkDerivation {
         pname = "qmk_firmware";
         version = "v1.0";
@@ -64,10 +63,9 @@
         ];
         patchPhase = builtins.concatStringsSep "\n" (
           map (k: ''
-            cp ${k.rules} keyboards/${k.keyboard}/rules.mk
-            cp ${k.config} keyboards/${k.keyboard}/config.h
-
             mkdir -p keyboards/${k.keyboard}/keymaps/${k.name}
+            cp ${k.rules} keyboards/${k.keyboard}/keymaps/${k.name}/rules.mk
+            cp ${k.config} keyboards/${k.keyboard}/keymaps/${k.name}/config.h
             cp ${k.keymap} keyboards/${k.keyboard}/keymaps/${k.name}/keymap.c
           '') keyboards
         );
@@ -81,6 +79,7 @@
           mkdir -p $out/bin
           cp -r .build/*.hex $out/firmware/
           cp ${flash}/bin/flash $out/bin
+          cp -ar ${qmk_firmware} $out/bin
         '';
       };
     in
