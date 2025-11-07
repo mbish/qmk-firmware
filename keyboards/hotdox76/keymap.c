@@ -96,14 +96,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                              └───┴───┴───┘ └───┴───┴───┘
      */
     [0] = LAYOUT_ergodox_pretty(
-        KC_MINS,        KC_1,         KC_2,    KC_3,   KC_4,    KC_5,           KC_LEFT,    KC_RIGHT,     KC_6,     KC_7,    KC_8,    KC_9,      KC_0,    KC_EQUAL,
-        LGUI_T(KC_TAB), KC_Q,         KC_W,    KC_E,   KC_R,    KC_T,           _______,    _______,      KC_Y,     KC_U,    KC_I,    KC_O,      KC_P,    KC_MINUS,
-                        KC_LEFT_CTRL, HOME_A,  HOME_S, HOME_D,  HOME_F,         LT(3,KC_G), KC_H,         HOME_J,   HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
-        OSM(MOD_LSFT),  KC_Z,         KC_X,    KC_C,   KC_V,    KC_B,           KC_B,       TG(1),        KC_N,     KC_M,    KC_COMM, KC_DOT,    KC_SLSH, OSM(MOD_RSFT),
-                                      KC_LCTL, KC_F4,  KC_LGUI, MO(2),          MO(1),      LT(1,KC_ESC), KC_DOWN,  KC_LBRC, KC_RBRC, KC_RGUI,
-                                                                KC_C,           KC_V,       KC_LEFT,      KC_RIGHT,
-                                                                                KC_PGUP,    KC_F1,
-                                                       KC_ENT,  LGUI_T(KC_TAB), KC_DEL,     KC_ENT,       KC_BSPC,  KC_SPC
+        KC_MINS,        KC_1,         KC_2,    KC_3,   KC_4,          KC_5,           KC_LEFT,    KC_RIGHT,     KC_6,     KC_7,    KC_8,    KC_9,      KC_0,    KC_EQUAL,
+        LGUI_T(KC_TAB), KC_Q,         KC_W,    KC_E,   KC_R,          KC_T,           _______,    _______,      KC_Y,     KC_U,    KC_I,    KC_O,      KC_P,    KC_MINUS,
+                        KC_LEFT_CTRL, HOME_A,  HOME_S, HOME_D,        HOME_F,         LT(3,KC_G), KC_H,         HOME_J,   HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
+        OSM(MOD_LSFT),  KC_Z,         KC_X,    KC_C,   KC_V,          KC_B,           KC_B,       TG(1),        KC_N,     KC_M,    KC_COMM, KC_DOT,    KC_SLSH, OSM(MOD_RSFT),
+                                      KC_LCTL, KC_F4,  KC_LGUI,       MO(2),          MO(1),      LT(1,KC_ESC), KC_DOWN,  KC_LBRC, KC_RBRC, KC_RGUI,
+                                                                      KC_C,           KC_V,       KC_LEFT,      KC_RIGHT,
+                                                                                      KC_PGUP,    KC_F1,
+                                                       LT(3, KC_ENT), LGUI_T(KC_TAB), KC_DEL,     KC_ENT,       KC_BSPC,  KC_SPC
     ),
     [1] = LAYOUT_ergodox_pretty(
         KC_MINUS, LSFT(KC_EQUAL), LSFT(KC_COMM), LSFT(KC_DOT),  KC_F4,        KC_F5,                 KC_LEFT,       KC_RIGHT, KC_F6,              KC_F7,             KC_F8,             KC_F9,   KC_F10,  KC_MINS,
@@ -116,20 +116,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                 _______,      _______,               KC_DEL,        KC_RCTL,  KC_ENT,             KC_SPC
     ),
     [2] = LAYOUT_ergodox_pretty(
-        KC_F1,   KC_MUTE, KC_VOLD, KC_VOLU, _______,  _______, _______, _______, _______, _______,   _______,       _______, _______, QK_BOOTLOADER,
-        _______, _______, KC_UP,   KC_ENT,  _______,  _______, _______, _______, _______, _______,   _______,       _______, _______, _______,
-                 _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,     KC_RIGHT,      _______, _______,
-        _______, _______, _______, _______, _______,  _______, _______, _______, _______, LAG(KC_W), LGUI(KC_LBRC), _______, _______, _______,
-                          _______, _______, _______,  _______, _______, _______, _______, _______,   _______,       _______,
-                                                      _______, _______, _______, _______,
-                                                               _______, _______,
-                                            _______,  _______, _______, _______, _______, _______
+        KC_F1,     KC_MUTE, KC_VOLD, KC_VOLU, _______,  _______, _______, _______, _______, _______,   _______,       _______, _______, QK_BOOTLOADER,
+        LAG(KC_N), _______, KC_UP,   KC_ENT,  _______,  _______, _______, _______, _______, _______,   _______,       _______, _______, _______,
+                   _______, KC_LEFT, KC_DOWN, KC_RIGHT, _______, _______, KC_LEFT, KC_DOWN, KC_UP,     KC_RIGHT,      _______, _______,
+        _______,   _______, _______, _______, _______,  _______, _______, _______, _______, LAG(KC_W), LGUI(KC_LBRC), _______, _______, _______,
+                            _______, _______, _______,  _______, _______, _______, _______, _______,   _______,       _______,
+                                                        _______, _______, _______, _______,
+                                                                 _______, _______,
+                                              _______,  _______, _______, _______, _______, _______
     ),
     [3] = LAYOUT_ergodox_pretty(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_AMPR, KC_ASTR, KC_LPRN, _______, _______,
+                 _______, _______, _______, _______, _______, _______, KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_EXLM, KC_AT,   KC_HASH, _______, _______,
                           _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                                      _______, _______, _______, _______,
                                                               _______, _______,
