@@ -97,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [0] = LAYOUT_ergodox_pretty(
         KC_MINS,        KC_1,         KC_2,    KC_3,   KC_4,          KC_5,           KC_LEFT,    KC_RIGHT,     KC_6,     KC_7,    KC_8,    KC_9,      KC_0,    KC_EQUAL,
-        LGUI_T(KC_TAB), KC_Q,         KC_W,    KC_E,   KC_R,          KC_T,           _______,    _______,      KC_Y,     KC_U,    KC_I,    KC_O,      KC_P,    KC_MINUS,
+        KC_TAB, KC_Q,         KC_W,    KC_E,   KC_R,          KC_T,           _______,    _______,      KC_Y,     KC_U,    KC_I,    KC_O,      KC_P,    KC_MINUS,
                         KC_LEFT_CTRL, HOME_A,  HOME_S, HOME_D,        HOME_F,         LT(3,KC_G), KC_H,         HOME_J,   HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
-        OSM(MOD_LSFT),  KC_Z,         KC_X,    KC_C,   KC_V,          KC_B,           KC_B,       TG(1),        KC_N,     KC_M,    KC_COMM, KC_DOT,    KC_SLSH, OSM(MOD_RSFT),
+        OSM(MOD_LSFT),  KC_Z,         KC_X,    KC_C,   KC_V,          KC_B,           KC_B,       MO(3),        KC_N,     KC_M,    KC_COMM, KC_DOT,    KC_SLSH, OSM(MOD_RSFT),
                                       KC_LCTL, KC_F4,  KC_LGUI,       MO(2),          MO(1),      LT(1,KC_ESC), KC_DOWN,  KC_LBRC, KC_RBRC, KC_RGUI,
                                                                       KC_C,           KC_V,       KC_LEFT,      KC_RIGHT,
                                                                                       KC_PGUP,    KC_F1,
@@ -126,14 +126,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                               _______,  _______, _______, _______, _______, _______
     ),
     [3] = LAYOUT_ergodox_pretty(
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_AMPR, KC_ASTR, KC_LPRN, _______, _______,
-                 _______, _______, _______, _______, _______, _______, KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_EXLM, KC_AT,   KC_HASH, _______, _______,
-                          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-                                                     _______, _______, _______, _______,
-                                                              _______, _______,
-                                            _______, _______, _______, _______, _______, _______
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,                   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_F13,  KC_F14,
+        _______, _______, _______, _______, _______, _______, QK_RGB_MATRIX_TOGGLE,    _______, _______, KC_AMPR, KC_ASTR, KC_LPRN, _______, _______,
+                 _______, _______, _______, _______, _______, QK_RGB_MATRIX_MODE_NEXT, KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______,                 _______, _______, KC_EXLM, KC_AT,   KC_HASH, _______, _______,
+                          _______, _______, _______, _______, _______,                 _______, _______, _______, _______, _______,
+                                                     _______, _______,                 _______, _______,
+                                                              _______,                 _______,
+                                            _______, _______, _______,                 _______, _______, _______
     )
 };
 
